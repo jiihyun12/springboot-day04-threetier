@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.controller.mapper.taskMapper">
+
+    <insert id="insert" parameterType="TaskVO">
+        INSERT INTO TBL_TASK
+        VALUES (SEQ_TASK.NEXTVAL, #{taskName}, #{taskPrice}, #{taskStock}, #{taskBrand})
+    </insert>
+
+
+
+
+</mapper>
+
+
