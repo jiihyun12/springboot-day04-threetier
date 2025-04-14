@@ -11,5 +11,6 @@ public class PostVO {
    private String postContent;
    private Long postReadCount;
    private Long memberId;
+
 }
 
