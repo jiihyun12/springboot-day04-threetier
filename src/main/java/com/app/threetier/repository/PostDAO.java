@@ -11,31 +11,22 @@ import java.util.Optional;
 @Repository
 @RequiredArgsConstructor
 public class PostDAO {
-    private final PostMapper postMapper;
 
-//    게시글 전체조회
-    public List<PostVO> findAll() {
-        return postMapper.selectAll();
-    }
+   private final PostMapper postMapper;
 
- // 게시글 단일 조회
-    public Optional<PostVO> findById(Long id){
-        return postMapper.select(id);
-    }
+//    전체 조회
+    public List<PostVO> findAll() { return postMapper.selectAll(); }
 
-//    게시글 전체 삭제
-    public void deleteAllByMemberId(Long memberId){
-        postMapper.deleteAll(memberId);
-    }
+//    단일 조회
+    public Optional<PostVO> findId( Long id ) { return postMapper.select(id);}
 
 //    게시글 작성
-    public void save(PostVO postVO){
-        postMapper.insert(postVO);
-    }
+    public void write(PostVO postVO) { postMapper.insert(postVO);}
 
 //    게시글 수정
-public void edit(PostVO postVO){
-        postMapper.update(postVO);
-}
+    public void edit(PostVO postVO) { postMapper.update(postVO);}
+
+//    게시글 삭제
+    public void delete(Long id) { postMapper.delete(id); }
 }
 

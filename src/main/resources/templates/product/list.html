@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>list</title>
+</head>
+<body>
+    <button onclick="window.location.href='/product/product'">글 작성하기</button>
+    <button onclick="window.location.href='/member/login'">로그인</button>
+    <button onclick="window.location.href='/member/logout'">로그아웃</button>
+    <button onclick="window.location.href='/member/withdraw'">탈퇴</button>
+
+    <table>
+        <tr>
+            <th>상품명</th>
+            <th>재고</th>
+        </tr>
+        <th:block th:each="product : ${products}">
+        <tr th:object="${product}">
+            <td>
+                <a th:href="@{/product/read(id=${product.id})}">
+                    <span th:text="*{productName}"></span>
+                </a>
+            </td>
+            <td th:text="*{productPrice}"></td>
+            <td th:text="*{productStock}"></td>
+            <td th:text="*{productBrand}"></td>
+        </tr>
+        </th:block>
+    </table>
+</body>
+</html>

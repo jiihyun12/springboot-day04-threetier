@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>update</title>
+</head>
+<body>
+    <form th:action="@{/product/edit}" method="post" th:object="${productVO}">
+        <input type="hidden" th:field="*{id}" />
+        <input th:field="*{productName}" placeholder="상품명" th:value="${productName}" />
+        <input th:field="*{productPrice}" placeholder="상품 가격" th:value="${productPrice}" />
+        <input th:field="*{productStock}" placeholder="상품 재고" th:value="${productStock}" />
+        <input th:field="*{productBrand}" placeholder="브랜드" th:value="${productBrand}" />
+        <button type="submit">수정 완료</button>
+    </form>
+</body>
+</html>

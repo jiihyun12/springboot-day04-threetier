@@ -2,19 +2,16 @@ package com.app.threetier.service;
 
 import com.app.threetier.domain.MemberVO;
 
+import javax.swing.text.html.Option;
 import java.util.Optional;
 
-// 서비스는 인터페이스로 만들자!
-// 하나의 메서드당 하나의 서비스
-public interface MemberService {
+public interface MemberService { // MemberService 누르고 ctrl 엔터 눌러서 implements 생성한다.
+
 //    회원가입
     public void join(MemberVO memberVO);
 
 //    로그인
     public Optional<MemberVO> login(MemberVO memberVO);
 
-//    회원 탈퇴
-    public void withdraw(Long id);
-
-
+    void withdraw(Long member);
 }

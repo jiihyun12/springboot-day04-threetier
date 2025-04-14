@@ -3,9 +3,12 @@ package com.app.threetier.domain;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-@Component
 @Data
+@Component
 public class ProductVO {
-   private int productPrice;
-   private String productName;
+    private Long id;
+    private String productName;
+    private int productPrice;
+    private int productStock;
+    private String productBrand;
 }

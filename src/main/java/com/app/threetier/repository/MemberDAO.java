@@ -13,18 +13,9 @@ public class MemberDAO {
     private final MemberMapper memberMapper;
 
 //    회원가입
-    public void save(MemberVO memberVO) {
-        memberMapper.insert(memberVO);
-    }
+    public void save(MemberVO memberVO) { memberMapper.insert(memberVO); }
 
 //    로그인
-    public Optional<MemberVO>  findByMemberIdAndMemberPassword(MemberVO memberVO) {
-        return memberMapper.select(memberVO);
-    }
+    public Optional<MemberVO> login(MemberVO memberVO) { return memberMapper.select(memberVO); }
 
-//    회원 탈퇴
-
-    public void delete(Long id){
-        memberMapper.delete(id);
-    }
 }
