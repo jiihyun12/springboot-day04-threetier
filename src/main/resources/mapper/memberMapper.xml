@@ -12,7 +12,3 @@
         FROM TBL_MEMBER
         WHERE MEMBER_EMAIL = #{memberEmail} AND MEMBER_PASSWORD = #{memberPassword}
     </select>
-
-
-
-</mapper>

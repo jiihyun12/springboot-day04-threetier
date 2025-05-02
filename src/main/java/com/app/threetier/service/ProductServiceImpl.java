@@ -4,18 +4,20 @@ import com.app.threetier.domain.ProductVO;
 import com.app.threetier.repository.ProductDAO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(rollbackFor = Exception.class)
 public class ProductServiceImpl implements ProductService {
 
     private final ProductDAO productDAO;
 
     @Override
-    public void insertProduct(ProductVO productVO) {productDAO.insert(productVO);}
+    public void register(ProductVO productVO) {productDAO.save(productVO);}
 
     @Override
     public List<ProductVO> selectAll() {

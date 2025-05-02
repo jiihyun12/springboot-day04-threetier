@@ -8,7 +8,8 @@
     <title>produdct</title>
 </head>
 <body>
-    <form th:action="@{/product/product}" method="post" th:object="${productVO}">
+    <form th:action="@{/product/register}" method="post" th:object="${productVO}"> // 오브젝트로 받지 않느면
+                                                                                   // 하단에서 product. 으로 하면 된다.
         <input th:field="*{productName}" placeholder="상품명" />
         <input th:field="*{productPrice}" placeholder="상품 가격" />
         <input th:field="*{productStock}" placeholder="상품 개수" />

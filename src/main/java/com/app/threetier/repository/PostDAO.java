@@ -24,9 +24,12 @@ public class PostDAO {
     public void write(PostVO postVO) { postMapper.insert(postVO);}
 
 //    게시글 수정
-    public void edit(PostVO postVO) { postMapper.update(postVO);}
+    public void update(PostVO postVO) { postMapper.update(postVO);}
 
 //    게시글 삭제
     public void delete(Long id) { postMapper.delete(id); }
-}
+
+    public void edit(PostVO postVO) { postMapper.update(postVO);}
+    }
+
 

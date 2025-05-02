@@ -54,7 +54,6 @@ public class PostController {
           model.addAttribute("memberId", memberId);
     }
 
-
     @PostMapping("edit")
     public RedirectView edit(PostVO postVO) {
         postService.edit(postVO);
@@ -66,7 +65,6 @@ public class PostController {
         postService.remove(id);
         return new RedirectView("/post/list");
     }
-
 
 
 

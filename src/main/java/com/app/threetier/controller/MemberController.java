@@ -81,8 +81,5 @@ public class MemberController {
         return new RedirectView("/member/login");
     }
 
-
-
-
 }
 

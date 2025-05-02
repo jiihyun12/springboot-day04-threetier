@@ -5,14 +5,9 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class PostVO {
+public class CompanyVO {
    private Long id;
-   private String postTitle;
-   private String postContent;
-   private Long postReadCount;
-   private Long memberId;
-
+   private String CompanyName;
+   private String getToWorkDateTime;
+   private String leaveToWorkDateTime;
 }
-
-
-

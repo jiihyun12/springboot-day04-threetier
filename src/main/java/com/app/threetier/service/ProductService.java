@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ProductService {
-    public void insertProduct(ProductVO productVO);
+    public void register(ProductVO productVO);
 
     public List<ProductVO> selectAll();
 

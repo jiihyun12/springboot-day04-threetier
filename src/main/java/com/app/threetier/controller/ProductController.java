@@ -19,15 +19,15 @@ public class ProductController {
     private final ProductService productService;
     private final HttpSession session;
 
-    @GetMapping("product")
-    public void goToProduct(Model model) {
+    @GetMapping("write")
+    public void goToRegister(Model model) {
         model.addAttribute("productVO", new ProductVO());
     }
 
-    @PostMapping("product")
+    @PostMapping("write")
     public RedirectView product(ProductVO productVO) {
-        productService.insertProduct(productVO);
-        return new RedirectView("/product/list");
+        productService.register(productVO);
+        return new RedirectView("/product/register");
     }
 
     @GetMapping("list")
@@ -57,4 +57,7 @@ public class ProductController {
         return new RedirectView("/product/list");
     }
 
+
 }
+
+

@@ -13,11 +13,13 @@ import java.util.Optional;
 public class ProductDAO {
     private final ProductMapper productMapper;
 
-    public void insert(ProductVO productVO) {
+    public void save(ProductVO productVO) {
+
         productMapper.insert(productVO);
     }
 
     public List<ProductVO> selectAll() {
+
         return productMapper.selectAll();
     }
 
@@ -26,10 +28,12 @@ public class ProductDAO {
     }
 
     public void update(ProductVO productVO) {
+
         productMapper.update(productVO);
     }
 
     public void delete(Long id) {
+
         productMapper.delete(id);
     }
 }
